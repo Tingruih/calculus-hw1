@@ -58,12 +58,6 @@ venv\Scripts\activate.bat
 source venv/bin/activate
 ```
 
-注意：預設 PowerShell 可能會阻擋執行腳本（Execution Policy），若啟用時出現錯誤，可暫時允許本機執行：以系統管理員權限執行 PowerShell，然後執行：
-```powershell
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-```
-
-啟用後，提示字首會顯示 (venv) 表示已啟用。
 
 ### 3. 安裝相依套件
 確保虛擬環境已啟用，然後安裝：
@@ -71,26 +65,10 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 pip install -r requirements.txt
 ```
 
-若你需要將目前環境的套件版本鎖定成檔案（供他人使用）：
+
+### 4. 執行專案 
+如何執行檔案：
 ```bash
-pip freeze > requirements.txt
+python test_kepler_law.py
 ```
 
-### 4. 執行專案 (範例)
-此專案主要範例檔案可能不同，下面只示範如何以 Python 執行模組：
-```bash
-python kepler_law.py
-```
-
-### 5. .gitignore 建議
-建議把虛擬環境目錄與常見暫存檔加入 `.gitignore`，例如：
-```
-venv/
-__pycache__/
-*.pyc
-.env
-```
-
----
-
-若你希望，我可以替你直接把 `venv/` 加入現有的 `.gitignore`，並（如果 venv 已被 commit）示範如何從 git 中移除。 
