@@ -1,4 +1,3 @@
-import numpy as np
 import matplotlib.pyplot as plt
 from kepler_law import *
 
@@ -71,17 +70,23 @@ def main():
     mse = calculate_model_mse(distances, periods, a, b)
     print(f"Mean Squared Error (MSE): {mse:.6f}")
 
-    # Test Kepler's Law (Earth vs Mars)
+    # Test Kepler's Law for all planets against Earth
+    print("\n--- Kepler's Law Test (comparing each planet to Earth) ---")
     earth_idx = planets.index("Earth")
-    mars_idx = planets.index("Mars")
     
-    diff = kepler_law_test(
-        period1=periods[earth_idx],
-        distance1=distances[earth_idx],
-        period2=periods[mars_idx],
-        distance2=distances[mars_idx]
-    )
-    print(f"Kepler Law Ratio Difference (Earth vs Mars): {diff:.6f}")
+    for i, planet in enumerate(planets):
+        # 跳過地球本身
+        if i == earth_idx:
+            continue
+        
+        diff = kepler_law_test(
+            period1=periods[earth_idx],
+            distance1=distances[earth_idx],
+            period2=periods[i],
+            distance2=distances[i]
+        )
+        print(f"Difference between Earth and {planet:<8}: {diff:.6f}")
+
 
 if __name__ == "__main__":
     main()
