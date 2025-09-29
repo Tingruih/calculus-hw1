@@ -7,29 +7,29 @@
 如果你尚未安裝 Python，請依照你的作業系統選擇下列步驟。
 
 - Windows
-	1. 到官方下載頁面：https://www.python.org/downloads/windows/ 下載最新的 Python 3.x 安裝程式。
-	2. 執行安裝程式時，務必勾選「Add Python to PATH」。
-	3. 安裝完成後，可在 PowerShell 中驗證：
-	```powershell
-	python --version
-	```
+    1. 到官方下載頁面：https://www.python.org/downloads/windows/ 下載最新的 Python 3.x 安裝程式。
+    2. 執行安裝程式時，務必勾選「Add Python to PATH」。
+    3. 安裝完成後，可在 PowerShell 中驗證：
+    ```powershell
+    python --version
+    ```
 
 - macOS
-	1. 建議使用 Homebrew（如果已安裝 Homebrew）：
-	```bash
-	brew install python
-	```
-	2. 或至 https://www.python.org/downloads/macos/ 下載安裝程式。
-	3. 驗證安裝：
-	```bash
-	python3 --version
-	```
+    1. 建議使用 Homebrew（如果已安裝 Homebrew）：
+    ```bash
+    brew install python
+    ```
+    2. 或至 https://www.python.org/downloads/macos/ 下載安裝程式。
+    3. 驗證安裝：
+    ```bash
+    python3 --version
+    ```
 
 - Linux (以 Ubuntu/Debian 為例)
-	```bash
-	sudo apt update; sudo apt install -y python3 python3-venv python3-pip
-	python3 --version
-	```
+    ```bash
+    sudo apt update; sudo apt install -y python3 python3-venv python3-pip
+    python3 --version
+    ```
 
 ### 1. 下載專案
 首先下載專案的原始碼：
@@ -51,13 +51,9 @@ python -m venv venv
 # Windows (PowerShell)
 venv\Scripts\Activate.ps1
 
-# 如果使用 cmd.exe
-venv\Scripts\activate.bat
-
 # Linux / macOS
 source venv/bin/activate
 ```
-
 
 ### 3. 安裝相依套件
 確保虛擬環境已啟用，然後安裝：
@@ -65,10 +61,19 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
+### 4. 選取 Python 解譯器 (VS Code)
+若使用 VS Code，請務必將解譯器指向專案的虛擬環境，以確保執行與偵錯的正確性。
 
-### 4. 執行專案 
+1.  開啟命令面板：
+    *   **Windows/Linux**: `Ctrl+Shift+P`
+    *   **macOS**: `Cmd+Shift+P`
+2.  輸入並選擇 `Python: Select Interpreter`。
+3.  在列表中選擇包含 `venv` 字樣的 Python 解譯器。VS Code 通常會自動偵測並推薦它。
+
+選取後，VS Code 的整合終端機將會自動使用此虛擬環境。
+
+### 5. 執行專案 
 如何執行檔案：
 ```bash
 python test_kepler_law.py
 ```
-
