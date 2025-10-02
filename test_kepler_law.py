@@ -22,60 +22,41 @@ def draw_period_vs_distance(distances, periods, a, b):
     plt.savefig("period_vs_distance.png", dpi=300, bbox_inches='tight')
     plt.close()  # Close the figure to free memory
 
-def calculate_model_mse(distances, periods, a, b):
-    # TODO: Calculate the mean squared error between model and actual data
-    
+def calculate_model_mse(distances, periods, a, b):    
     # 使用擬合模型計算預測週期
     predicted_periods = a * (distances ** b)
-    
     # 計算預測值與實際值之間的差的平方
     squared_errors = (predicted_periods - periods) ** 2
-    
     # 計算平均平方誤差
-    mse = np.mean(squared_errors)
-    
+    mse = np.mean(squared_errors)   
     return mse
 
 def kepler_law_test(period1, distance1, period2, distance2):
-    # TODO: Design and implement an error to compare (period1, distance1) and (period2, distance2)
-    # according to the Kepler's Third Law (period^2 is proportional to distance^3)
-    
-    # 根據克卜勒第三定律，T^2/d^3 對所有行星應該是常數
-    # 計算兩個行星的 T^2/d^3 比值
     ratio1 = (period1 ** 2) / (distance1 ** 3)
     ratio2 = (period2 ** 2) / (distance2 ** 3)
     
     # 計算比值間的絕對差異，作為誤差指標
     diff = abs(ratio1 - ratio2)
-    
     return diff
 
-# Main program execution
 def main():
-    # TODO: Replace these data with real data in the lecture slide
-    # 根據提供的圖片資料更新行星資料
     planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
-    distances = np.array([0.387, 0.723, 1.000, 1.523, 5.203, 9.541, 19.190, 30.086])  # In astronomical units (AU)
-    periods = np.array([0.241, 0.615, 1.000, 1.881, 11.861, 29.457, 84.008, 164.784])  # In Earth years
+    distances = np.array([0.387, 0.723, 1.000, 1.523, 5.203, 9.541, 19.190, 30.086])  
+    periods = np.array([0.241, 0.615, 1.000, 1.881, 11.861, 29.457, 84.008, 164.784]) 
 
-    # Fit power model
     a, b = period_vs_distance_fit(distances, periods)
     print(f"Fitted power model: T = {a:.4f} * d^{b:.4f}")
 
-    # Draw plot and save image
     draw_period_vs_distance(distances, periods, a, b)
     print("Plot saved as 'period_vs_distance.png'")
 
-    # Calculate MSE
     mse = calculate_model_mse(distances, periods, a, b)
     print(f"Mean Squared Error (MSE): {mse:.6f}")
 
-    # Test Kepler's Law for all planets against Earth
     print("\n--- Kepler's Law Test (comparing each planet to Earth) ---")
     earth_idx = planets.index("Earth")
     
     for i, planet in enumerate(planets):
-        # 跳過地球本身
         if i == earth_idx:
             continue
         

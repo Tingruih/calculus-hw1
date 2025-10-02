@@ -1,11 +1,7 @@
 import numpy as np
 
 def period_vs_distance_fit(distances, periods):
-    # TODO: Fit the power function T = a * d^b
-    # Hints: 
-    # 1. Apply logarithm to convert to linear model: log(T) = log(a) + b * log(d)
-    # 2. Use numpy.log and numpy.polyfit (with degree 1)
-    
+
     # 將距離和週期資料取對數，轉換為線性模型
     log_distances = np.log(distances)
     log_periods = np.log(periods)
@@ -21,5 +17,4 @@ def period_vs_distance_fit(distances, periods):
     # 從 log(a) 計算 a 值
     a = np.exp(log_a)
 
-    return a, b  # Return parameters of the power model
-
+    return a, b  
