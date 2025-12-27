@@ -1,10 +1,6 @@
 import numpy as np
 
 def period_vs_distance_fit(distances, periods):
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/main
     # 將距離和週期資料取對數，轉換為線性模型
     log_distances = np.log(distances)
     log_periods = np.log(periods)
