@@ -1,0 +1,16 @@
+# Python
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDE
+.vscode/
+.DS_Store
+
+# Large files
+report.pdf
+hw1.pdf
+*.png
+!images/*.png
+!period_vs_distance.png
