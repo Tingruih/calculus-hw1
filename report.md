@@ -182,7 +182,9 @@ $y = 3^x$ 為指數函數 (exponential function)，值域 $(0, \infty)$，即唯
 What do all members of the family of linear functions $f(x) = 1 + m(x + 3)$ have in common Sketch several members of the family.
 ## Ans6
 假設 $x = -3$，能發現無論 $m$ 值為多少，代入 $f(-3) = 1 + m(-3 + 3) = 1 + m \cdot 0 = 1 + 0 = 1$。用視覺化 (Visually) 方式，可得知在 $xy$ 座標平面中，圖形皆會交於 $(-3, 1)$ 這點上。意思是隨 $m$ 變動，圖形皆會以一條無限長的直線 (linear)，並以 $(-3, 1)$ 為中心旋轉（類似時鐘中心，但並不包括垂直線）。而且，當 $|m|$ 非常大時，圖形在巨觀（正常尺度）觀察下會非常類似鉛直線，這是肉眼分辨不出的。
-![](images/q6-2.png)
+<div style="display: flex; justify-content: center; gap: 20px; margin-top: 10px;">
+  <img src="images/q6-2.png" style="max-width: 65%; height: auto;">
+</div>
 <div style="display: flex; justify-content: center; gap: 20px; margin-top: 10px;">
   <img src="images/q6-1.png" style="max-width: 45%; height: auto;">
 </div>
@@ -223,6 +225,10 @@ You place a frozen pie in an oven and bake it for an hour. Then you take it out 
 1. 剛一開始從冷凍狀態開始加熱時，因為溫差較大，一接觸熱會快速上升至與烤箱一樣溫度(與室溫相比)，然後幾乎不變到拿出接觸較低室溫而開始下降，而注意的是，因為室溫大於冷凍時的溫度，所以在下降到與室溫差不多時，會比一開始放進烤箱時還高。
 
 2. 
+<div style="text-align: center; margin-top: 10px;">
+  <img src="images/IMG_0103.jpeg" style="max-width: 60%; height: auto;">
+</div>
+
 ---
 
 ## Q2
@@ -249,6 +255,9 @@ Researchers measured the blood alcohol concentration (BAC) of eight adult male s
 
 ## Ans3
 1. 
+<div style="text-align: center; margin-top: 10px;">
+  <img src="images/IMG_0111.jpeg" style="max-width: 80%; height: auto;">
+</div>
 
 2. 根據上表與上述內容，我們可以繪製出對應圖形。觀測結果顯示，成人在攝入 $30\text{ mL}$ 的乙醇後，八位男性身體平均的 BAC ($\text{g/dL}$) 會有明顯且快速的上升。最高值的位置介於 $t$ 為 $0.5 \sim 0.75$ 之間；而後約在 $t = 0.75$ 處開始隨著時間降低，直到 $t = 4.0$ 時趨近於 $0$。
 
@@ -263,6 +272,9 @@ Express the function $h(x) = \sqrt{4-x^2}$
    即定義域 (Domain) 為 $[-2, 2]$。根據 $4 - x^2$ 的性質，$h(x)$ 的最大值發生在 $x = 0$ 時，為 $\sqrt{4} = 2$，故值域 (Range) 為 $[0, 2]$。
 
 2. 
+<div style="text-align: center; margin-top: 10px;">
+  <img src="images/IMG_0107.jpeg" style="max-width: 70%; height: auto;">
+</div>
 
 3. 從圖形中我們可以發現，$h(x)$ 的圖形是一個上半圓，且圓心位於 $(0, 0)$；此外，最高點為 $(0, 2)$，最低點則位於 $(-2, 0)$ 與 $(2, 0)$ 兩點。另外可以發現其性質：圖形以 $y$ 軸為對稱軸，呈現左右對稱。
 
@@ -282,9 +294,26 @@ A Norman window has the shape of a rectangle surmounted by a semicircle. If the 
    $$A(x) = 5x - \left(\frac{4 + \pi}{8}\right)x^2$$
 
 2. 
+| $x$ | $A$ |
+| :---: | :---: |
+| 0 | 0 |
+| 0.5 | $\approx 2.28$ |
+| 1.0 | $\approx 4.11$ |
+| 2.0 | $\approx 6.43$ |
+| 2.8 | $\approx 7.00$ |
+| 3.0 | $\approx 6.96$ |
+| 3.5 | $\approx 6.56$ |
+| 4.0 | $\approx 5.71$ |
+| 4.5 | $\approx 4.42$ |
+| 5.0 | $\approx 2.68$ |
+| 5.5 | $\approx 0.49$ |
+| 6.0 | $\approx -2.15$ |
 3. 
-4. 
+<div style="text-align: center; margin-top: 10px;">
+  <img src="images/IMG_0113.jpeg" style="max-width: 60%; height: auto;">
+</div>
 
+4. 先從1.所得的A公式判斷，A(x)為一個開口向下的拋物線(二次項係數為負)，故會有個最高值，而從圖中也可證明此結果，表格顯示隨著x從0增加到2公尺，面積A快速上升。數值在 x\approx2.8公尺時，面積A達到最高7.0平方公尺。過了這個點後，面積A數值反而開始下降，甚至當x為6.0公尺時，面積A呈現負數，意思為圖形不成立。連結題目，周長固定時，在x從0開始變大，剛開始會呈現窄長的窗戶，而上半圓也會非常小，到x為2.8時，上半圓與長方形加起來的面積為最大，然而隨著x在增加，雖然上半圓會越來越大，但由於周長固定，長方形會越來矮，從寬矮窗戶到最終可能只剩半圓窗戶。
 ## Q6
 Describe the differences in understanding a function from different forms of expression (ftable, description, formula, and graph).
 
@@ -663,7 +692,9 @@ def period_vs_distance_fit(distances, periods):
 ## Appendix A
 ### 9/21(一)
 開會討論投票
-![](images/a.png)
+<div style="display: flex; justify-content: center; gap: 20px; margin-top: 10px;">
+  <img src="images/a.png" style="max-width: 50%; height: auto;">
+</div>
 最後決定9/27(六)晚上
 
 #### 工作分配
@@ -679,14 +710,18 @@ def period_vs_distance_fit(distances, periods):
 因為那週同學剛開學有活動和簡報形式的不確定，我們沒有及時溝通清楚，所以只有部分同學開始做，不過星期一都有開始補齊。
 
 最後我們達成共識，統一用canva文件的形式，並且討論的形式由線下改為線上，先把自己的部分做完，並讓組員知道彼此的工作進度，互相監督
-![](images/b.png)
+<div style="display: flex; justify-content: center; gap: 20px; margin-top: 10px;">
+  <img src="images/b.png" style="max-width: 50%; height: auto;">
+</div>
 
 ### 9/30(二) 13:30~16:00 圖書館、10/2(三)、10/3(四)
 #### 困難討論與解決：
 
 1.  **Basic Concept Q8 (心智圖)**
     *   這本來是分配給楊昕展同學，但他不太懂怎麼做。在圖書館時蘇星丞同學和黃柏崴同學給出建議，做類似樹狀圖樣，先做出草稿（做了三次，最後決定加入超越函數 transcendental），再用線上心智圖軟體解決。
-    *   ![](images/c.png)
+    *   <div style="display: flex; justify-content: center; gap 20px;      margin-top: 10px;">
+        <img src="images/c.png" style="max-width: 60%; height: auto;">
+        </div>
 
 2.  **Python 安裝**
     *   **楊昕展提問**：「我不太懂老師要我們只寫安裝python就好，還是包括下載編譯器，但是太了多。」
